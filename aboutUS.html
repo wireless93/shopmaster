@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Glisten You Always - AboutUS</title>
+	
+	<meta charset="utf-8">
+	<link href="favslider.css" rel="stylesheet" type="text/css" />
+	<script src="jquery.min.js" type="text/javascript"></script>
+	<script src="jquery.flexslider.js" type="text/javascript"></script>
+	<style type = "text/css" >
+		body 			{		margin				: 0px;
+								padding				: 0px;
+								background			: #CAA;
+								font-family			: 'Chivo', sans-serif, '微軟正黑體', 'Arial Unicode MS';
+								font-size			: 12pt;
+								font-weight			: 300;
+								color				: #363636;
+		}
+
+		#allBG			{	
+							box-shadow: 0px 30px 7px 30px rgba(66,53,0,0.3);
+							width 					: 941px;
+							height					: 800px;
+							background				: white;
+							margin-left	 			: auto;
+							margin-right 			: auto;	
+							
+
+		}
+/********************************||Menu選項||********************************/
+		#menu-wrapper	{		background			: #B10058;
+								position 			: fixed;
+								width 				: 100%;
+								z-index 			: 1;
+								box-shadow 			: 0px 8px 15px #333;
+
+								//box-shadow: 0px 3px 7px 6px rgba(66,53,0,0.3);
+		}
+
+		#menu 			{		overflow			: hidden;
+								height				: 100px;
+		}
+
+		#menu ul 		{		margin				: 0;
+								padding				: 0px 0px 0px 0px;
+								list-style			: none;
+								line-height			: normal;
+								text-align			: center;
+		}
+
+		#menu li 		{		display				: inline-block;
+		}
+
+		#menu a 		{		display				: block;
+								letter-spacing		: 1px;
+								padding				: 0px 40px;
+								text-decoration		: none;
+								text-align			: center;
+								text-transform		: uppercase;
+								font-size			: 0.80em;
+								line-height			: 100px;
+								border				: none;
+								color				: #FFF;
+		}
+		#menu a:hover 	{		background-color	: #FBC228;
+								color				: #B10058;
+								box-shadow : 0px 0px 4px 4px rgba(251, 194, 40, 0.6);
+		}
+
+		#menu .current_page_item a:hover  {
+								text-decoration		: none;
+								color				: #FBC228;
+								box-shadow  		: none;
+		}
+
+		#menu .current_page_item a {
+								background			: #C0005F;
+		}
+/********************************||Tag選項||********************************/
+		table.tagTable		{	
+								width				: 941px;
+								border				: 0px;
+								background-color	: #FFFFFF;
+								position			: relative;
+								top					: -560px;	
+								padding-left		: 90px;	
+		}
+
+		table.tagTable td.hotTag	{
+								width				: 200px;
+								padding-bottom		: 15px;
+		}
+		table.tagTable td.subTag	{
+								width				: 70px;		padding-bottom		: 15px;	
+		}
+		table.tagTable td.map	{
+								width				: 200px;
+								padding-bottom		: 15px;
+		}
+		div.demo_head	{		background			: rgba(255, 216, 61, .9);
+								font-weight			: 600;
+								width				: 100px;
+								height				: 30px;
+								padding-top			: 8px;
+								padding-left		: 12px;
+								border-left-width	: 8px;
+								border-left-style	: inset;
+								border-left-color	: rgba(229, 228, 225, .3);	
+								box-shadow: 4px 3px 7px 0px rgba(66,53,0,0.3); 
+		}
+		div.demo_head:hover	{	color 				: #990000; 
+								box-shadow: 4px 3px 7px 0px rgba(66,53,0,0.8);
+		}
+		div.demo_tag	{		background			: rgba(86, 210, 235, .9);
+								color 				: #444;
+								font-weight			: 600;
+								text-align			: center;
+								width				: 50px;
+								height				: 30px;
+								padding-top			: 8px;
+								border-left-width	: 8px;
+								border-left-style	: double;
+								border-left-color	: rgba(14, 10, 255, .5);	
+								box-shadow: 4px 3px 7px 0px rgba(66,53,0,0.3);
+		}
+		div.demo_tag:hover{
+								background			: rgba(176, 241, 55, .9);
+								color 				: #777;
+								border-left-style	: double;
+								border-left-color	: rgba(51, 76, 5, .5);
+
+		}
+
+/***************************||Footer||***************************/
+		#footer 		{
+								font-family 		: 'Chivo', sans-serif;
+								font-size 			: 20px;								
+								font-weight 		: 400;
+								text-align 			: center;
+								color 				: rgb(244, 159, 197);
+
+								top 				: 5px;
+								height 				: 250px;
+								width 				: 100%;
+								background 			: #6A0C36; 
+								position 			: relative;
+		}
+		#footer header	{
+								font-family 		: 'Arial Unicode MS', sans-serif;
+								font-size 			: 34px;
+								font-weight 		: 400;
+								text-align 			: center;
+								padding-top 		: 48px;
+								padding-bottom 		: 28px;
+								color 				: rgb(255, 206, 71);
+        }
+        #footer hr	{
+								border 				: 2px solid #C51665;
+								width 				: 80%;
+								
+
+        }
+		
+	</style>
+
+</head>
+<body>
+	
+	<div id="menu-wrapper">
+		<div id="menu" class="container">
+			<ul>
+				<li><a href="index2.html">Homepage</a></li>				
+				<li><a href="product.html">Product</a></li>
+				<li><a href="dressUp.html">Dressing Room</a></li>
+				<li class="current_page_item"><a href="aboutUS.html">About</a></li>
+			</ul>
+		</div>
+			<!-- end #menu --> 
+	</div>
+
+	<div id="allBG">
+		<table class="tagTable" style="padding-top:700px;">
+			<tr>
+				<td class="hotTag"><div class="demo_head">網站初衷</div><td><div>由於看到周遭同儕時常流連網拍，因此興起了去架設一個屬於自己的衣物展示平台!</div></td></td >
+			</tr>
+			<tr>
+			<td class="hotTag"><div class="demo_head">網站初衷</div><td>網站簡介<div>這是一個能夠讓你隨意試穿衣服，並能隨時進行價錢的加總計算的拍賣網站</div></td>
+			</tr>
+			<tr>
+				<td class="subTag"><div class="demo_tag">地址</div></td><td>202基隆市中正區北寧路2號</td>
+			</tr>
+			<tr>
+				<td colspan="2" id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.550883977578!2d121.77026401549566!3d25.1508703839177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4f069442d667%3A0xb447cb29ab0ce65b!2zMjAy5Z-66ZqG5biC5Lit5q2j5Y2A5YyX5a-n6LevMuiZnw!5e0!3m2!1szh-TW!2stw!4v1497555459427" width="800" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></td>
+			</tr>
+		</table>
+
+	</div>	
+
+	<div id="footer">
+			<div id="container">
+				<section>
+					<header class="footer">
+						Glisten You Always
+					</header><hr>
+					<body>
+						<p>Thank you for visiting, hoping to serve you !
+
+					</body>
+				</section>
+			</div>
+		</div>
+</body>
+
+</html>

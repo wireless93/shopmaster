@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Glisten You Always - Dressing Room</title>
+	<meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="favslider.css" rel="stylesheet" type="text/css" />
+	<script src="jquery.min.js" type="text/javascript"></script>
+	
+	<script src="jquery.flexslider.js" type="text/javascript"></script>
+
+	<style type = "text/css" >
+	/******************************||Menu選項||******************************/
+		#menu-wrapper	{		background			: #B10058;
+								position 			: fixed;
+								width 				: 100%;
+								z-index 			: 5;
+								box-shadow 			: 0px 8px 15px #333;
+
+								//box-shadow: 0px 3px 7px 6px rgba(66,53,0,0.3);
+		}
+
+		#menu 			{		overflow			: hidden;
+								height				: 100px;
+		}
+
+		#menu ul 		{		margin				: 0;
+								padding				: 0px 0px 0px 0px;
+								list-style			: none;
+								line-height			: normal;
+								text-align			: center;
+		}
+
+		#menu li 		{		display				: inline-block;
+		}
+
+		#menu a 		{		display				: block;
+								letter-spacing		: 1px;
+								padding				: 0px 40px;
+								text-decoration		: none;
+								text-align			: center;
+								text-transform		: uppercase;
+								font-size			: 0.80em;
+								line-height			: 100px;
+								border				: none;
+								color				: #FFF;
+		}
+		#menu a:hover 	{		background-color	: #FBC228;
+								color				: #B10058;
+								box-shadow : 0px 0px 4px 4px rgba(251, 194, 40, 0.6);
+		}
+
+		#menu .current_page_item a:hover  {
+								text-decoration		: none;
+								color				: #FBC228;
+								box-shadow  		: none;
+		}
+
+		#menu .current_page_item a {
+								background			: #C0005F;
+		}
+/********************************||輪播 Slider||********************************/
+		#slider 		{
+								padding-top 			: 100px;	
+			
+		}
+		#slider-index	{
+								width				: 941px;
+								margin-left			: auto;
+								margin-right		: auto;
+		}
+		#slider img 	{
+								height 				: 400px;	
+			
+		}
+/********************************||Tag選項||********************************/
+		table.tagTable		{	
+								width				: 941px;
+								border				: 0px;
+								background-color	: #FFFFFF;
+								position			: relative;
+								top					: -38px;								
+								padding 			: 9px;	
+
+		}
+		table.tagTable td.hotTag	{
+								width				: 200px;
+		}
+		table.tagTable td.subTag	{
+								width				: 70px;					
+		}
+		div.demo_head	{		background			: rgba(255, 216, 61, .9);
+								font-weight			: 600;
+								width				: 100px;
+								height				: 30px;
+								padding-top			: 8px;
+								padding-left		: 12px;
+								border-left-width	: 8px;
+								border-left-style	: inset;
+								border-left-color	: rgba(229, 228, 225, .3);	
+								box-shadow: 4px 3px 7px 0px rgba(66,53,0,0.3); 
+		}
+		div.demo_head:hover	{	color 				: #990000; 
+								box-shadow: 4px 3px 7px 0px rgba(66,53,0,0.8);
+		}
+		div.demo_tag	{		background			: rgba(86, 210, 235, .9);
+								color 				: #444;
+								font-weight			: 600;
+								text-align			: center;
+								width				: 50px;
+								height				: 30px;
+								padding-top			: 8px;
+								border-left-width	: 8px;
+								border-left-style	: double;
+								border-left-color	: rgba(14, 10, 255, .5);	
+								box-shadow: 4px 3px 7px 0px rgba(66,53,0,0.3);
+		}
+		div.demo_tag:hover{
+								background			: rgba(176, 241, 55, .9);
+								color 				: #777;
+								border-left-style	: double;
+								border-left-color	: rgba(51, 76, 5, .5);
+
+		}
+	/******************************||Body||******************************/
+		body 			{		margin				: 0px;
+								padding				: 0px;
+								background			: #AAA;
+								font-family			: 'Chivo', sans-serif, "微軟正黑體", "Arial Unicode MS";
+								font-size			: 12pt;
+								font-weight			: 300;
+								color				: #363636;
+		}
+
+		#mainBG			{		
+							background 				: rgb(69, 69, 69); 
+							box-shadow: 0px 30px 7px 30px rgba(66,53,0,0.3);
+							width 					: 941px;
+							height 					: 820px;
+							padding-top 			: 100px;
+							margin-left				: auto;
+							margin-right			: auto;
+							
+		}
+		#toolBG			{		
+							width 					: 250px;
+							height 					: 670px; 
+							background 				: rgba(180,180,180,0.7);
+							opacity 				: 0.8;
+							float 					: left;
+							position 				: relative;
+		}
+		#dressZone		{	
+							width					: 680px;
+							height					: 670px;
+							left 					: 5px;
+							float 					: left;
+							margin-left				: auto;
+							margin-right			: auto;
+							background 				: rgba(245, 242, 184 , .5);
+							position 				: relative;
+		}
+		/*************************||ToolBar選項||***************************/
+		#toolBar		{	
+								width				: 230px;
+								padding-top			: 20px;
+								margin-left			: auto;
+								margin-right		: auto;
+		}
+		#toolBar div.basket {	
+								width 				: 230px;
+								height 				: 156px; 
+								border-radius		: 10px;
+								background 			: rgba(245, 242, 184 , .5);
+								text-align			: center;
+
+		}
+		#toolBar div.basket:hover {																border-bottom-style	: solid;
+								border-bottom-color	: rgba(179, 0, 89, .9);
+								border-bottom-left-radius	: 10px;
+								border-bottom-right-radius	: 10px;
+								
+		}
+		#toolBar div.title {	
+								font-size 			: 23px;
+								text-align			: center;
+								width 				: 230px;
+								height 				: 30px;
+								border-bottom-width	: 4px;
+								border-bottom-style	: solid;
+								border-bottom-color	: rgba(255, 232, 56, .9);
+								border-bottom-left-radius	: 10px;
+								border-bottom-right-radius	: 10px;
+								box-shadow: 0px 2px rgba(128, 128, 128, .5);
+								text-shadow: 2px 2px rgba(128, 128, 128, .8);
+								color: #FFE838;
+
+		}
+		#toolBar div.basket_title {	
+								width 				: 230px;
+								height 				: 25px; 
+								border-bottom-left-radius	: 10px;
+								border-bottom-right-radius	: 10px;
+								top 				: 128px;
+								color 				: #4D4D47; 
+								background 			: rgba(255, 216, 61, .9);
+								position			: relative;
+								text-align			: center;			
+		}
+		#toolButton_Clr	{	
+								font-size 			: 16px; 
+								color 				: #A8E000;
+								text-align 			: center; 
+								width 				: 110px;
+								height 				: 25px; 
+								background 			: rgba(96, 128, 0, .8);
+								border-radius 		: 7px;
+								margin-left			: auto;
+								margin-right		: auto;
+		}
+		#toolButton_Cal	{
+								font-size 			: 16px; 
+								color 				: white;
+								text-align 			: center; 
+								width 				: 110px;
+								height 				: 25px; 
+								background 			: rgba(148, 0, 0, .85);
+								border-radius 		: 7px;
+								margin-left			: auto;
+								margin-right		: auto;
+		}
+		#toolButton_Clear	{
+	font-size 			: 16px;
+	color 				: white;
+	text-align 			: center;
+	width 				: 110px;
+	height 				: 25px;
+	background 			: rgba(58, 8, 16, .8);
+	border-radius 		: 7px;
+	margin-left			: auto;
+	margin-right		: auto;
+	position 			: absolute;
+	left 				: 13px;
+	top 				: 615px;
+		}
+		/***************************||Footer||***************************/
+		#footer 		{
+								font-family 		: 'Chivo', sans-serif;
+								font-size 			: 20px;								
+								font-weight 		: 400;
+								text-align 			: center;
+								color 				: rgb(244, 159, 197);
+
+								top 				: 5px;
+								height 				: 250px;
+								width 				: 100%;
+								background 			: #6A0C36; 
+								position 			: relative;
+		}
+		#footer header	{
+								font-family 		: 'Arial Unicode MS', sans-serif;
+								font-size 			: 34px;
+								font-weight 		: 400;
+								text-align 			: center;
+								padding-top 		: 48px;
+								padding-bottom 		: 28px;
+								color 				: rgb(255, 206, 71);
+        }
+        #footer hr	{
+								border 				: 2px solid #C51665;
+								width 				: 80%;
+								
+
+        }
+	</style>
+
+	<script type="text/javascript">
+		jQuery.noConflict();
+		jQuery(window).load(function(){
+		      jQuery('#slider-index').favslider({
+			animation: "slide",
+			directionNav: true,
+			keyboardNav: true,
+			mousewheel: false,
+			slideshow: true,
+			slideshowSpeed: 7000,
+			randomize: false,
+			animationLoop: true,
+			pauseOnHover: true,
+
+		controlNav: true,  start: function(slider){
+		       jQuery('body').removeClass('loading');
+		        }
+		      });	  
+		    });
+	</script> 
+	
+	<script>
+	var cloprice=["3580","490","490","490","520","2880","2400","1350"];
+	var cloprice1=["1250","980","890","1250","1250","650","1800","1450"];
+	var cloprice2=["650","650","890","890","1280","890","890","1280"];
+	var cp=0;
+	var cp1=0;
+	var cp2=0;
+	
+		var i;
+		i = -1;
+		var j;
+		j = -1;
+		var k = -1;
+		var m = -1;
+		var getpic;
+		var pic = [];
+        var pic1 = [];
+		var pic2 = [];
+		var p1counter = 0;
+		var p2counter = 0;
+		var p3counter = 0;
+		
+		var getdiv;
+		getdiv = document.getElementById("wu");
+
+		function start()
+		{
+			var clothes;
+			var trouses;
+			var shoes;
+			if (typeof(Storage) !== "undefined") {
+				for(var i=1; i<11; i++){
+					clothes = "clothes" + i;
+					if(localStorage[clothes] !== null && localStorage[clothes]!== undefined && localStorage[clothes]!== ''){
+						pic[i-1]= localStorage[clothes]+".png";
+					}
+				}
+				for(var i=1; i<11; i++){
+					trouses = "trouses" + i;
+					if(localStorage[trouses] !== null && localStorage[trouses]!== undefined && localStorage[trouses]!== ''){
+						pic1[i-1]= localStorage[trouses]+".png";
+					}
+				}
+				for(var i=1; i<11; i++){
+					shoes = "shoes" + i;
+					if(localStorage[shoes] !== null && localStorage[shoes]!== undefined && localStorage[shoes]!== ''){
+						pic2[i-1]= localStorage[shoes]+".png";
+					}
+				}
+				counter();
+				show();				
+			}
+		}
+		
+		function counter()
+		{
+			for(var i=0; i<10; i++){
+				if(pic[i] !== null && pic[i]!== undefined && pic[i]!== ''){
+						p1counter++;
+				}	
+				if(pic1[i] !== null && pic1[i]!== undefined && pic1[i]!== ''){
+						p2counter++;
+				}	
+				if(pic2[i] !== null && pic2[i]!== undefined && pic2[i]!== ''){
+						p3counter++;
+				}	
+			}
+		}
+		
+		window.addEventListener("load", start, false);
+		
+		function removeBasket() 
+			{
+				localStorage.clear();
+				window.location.reload();
+			}
+
+		function clidiv() {
+			
+			if (pic[i+1] != null) {
+                i++;
+				$("#wu").css({
+					border: "1px solid green",
+					background: "green"
+				});
+				getpic = document.getElementById("lei");
+				getpic.setAttribute("src", "dressUp/" + pic[i]);
+
+				getpic.setAttribute("style", "z-index:3;position:absolute; top: 180px; left: 270px; height:170px; width:160px; ");
+              cp=cloprice[i];
+				budget();
+			}
+		}
+
+		/*function clidiv1() {
+			
+			if (pic[j+1] != null) {
+               j++;
+
+				getpic = document.getElementById("lei1");
+				getpic.setAttribute("src", pic[j]);
+				getpic.setAttribute("style", "z-index:3;position:absolute;  top: 50px; left: 230px; height:150px; weight:150px; ");
+
+               
+			}
+		}
+              */
+		function clidiv2() {
+
+			
+			if (pic[k+1] != null) {
+
+                k++;
+				getpic = document.getElementById("lei2");
+				getpic.setAttribute("src", "dressUp/" +  pic1[k]);
+				getpic.setAttribute("style", "z-index:3;position:absolute; top: 332px; left: 245px; height:240px; width:210px;");
+            cp1=cloprice1[k];
+				budget();
+			}
+		}
+
+		function clidiv3() {
+
+			
+			if (pic[m+1] != null) {
+
+                m++;
+				getpic = document.getElementById("lei3");
+				getpic.setAttribute("src", "dressUp/" +  pic2[m]);
+				getpic.setAttribute("style", "z-index:3;position:absolute; position:absolute; top: 520px; left: 410px; height:80px; width:80px;");
+                cp2=cloprice2[m];
+				budget();
+			}
+		}
+
+
+		function leftcon() {
+
+			if (i > 0) {
+
+
+				--i;
+				getpic = document.getElementById("lei");
+				getpic.setAttribute("src", "dressUp/" +  pic[i]);
+                cp=cloprice[i];
+				budget();
+			}
+
+		}
+
+		function leftcon1() {
+
+			if (j > 0) {
+
+
+				--j;
+				getpic = document.getElementById("lei1");
+				getpic.setAttribute("src", "dressUp/" +  pic[j]);
+				budget();
+			}
+		}
+
+		function leftcon2() {
+
+			if (k > 0) {
+
+
+				--k;
+				getpic = document.getElementById("lei2");
+				getpic.setAttribute("src", "dressUp/" +  pic1[k]);
+                cp1=cloprice1[k];
+				budget();
+			}
+		}
+
+		function leftcon3() {
+
+			if (m > 0) {
+
+
+				--m;
+				getpic = document.getElementById("lei3");
+				getpic.setAttribute("src", "dressUp/" +  pic2[m]);
+                cp2=cloprice2[m];
+				budget();
+			}
+		}
+
+		function ranclo() {
+			face = Math.floor(-1 + Math.random() * p1counter);
+			i = face;
+			face = Math.floor(-1 + Math.random() * 2);
+			j = face;
+			face = Math.floor(-1 + Math.random() * p2counter);
+			k = face;
+			face = Math.floor(-1 + Math.random() * p3counter);
+			m = face;
+			clidiv();
+			
+			clidiv2();
+			clidiv3();
+			budget();
+		}
+		
+		function show()
+		{
+		
+			var tagImg = document.getElementById("basket1");
+			for(var s=0;s<p1counter;s++){
+			//tagImg.innerHTML += "<img src='"+pic[s]+"' width=100px height=100px style='display:inline-block;float:left;'>";
+			var npicture=document.createElement("img");
+			npicture.setAttribute("src", "dressUp/" + pic[s]);
+			npicture.setAttribute("style", "height: " + 110 + "px; width: " + 110+ "px;display:inline; float:left;");
+			tagImg.appendChild(npicture);
+			}
+			var tagimg1=document.getElementById("basket2");
+			for(var v=0;v<p2counter;v++)
+			{
+			var npicture=document.createElement("img");
+			npicture.setAttribute("src", "dressUp/" + pic1[v]);
+			npicture.setAttribute("style", "height: " + 110 + "px; width: " + 110+ "px;display:inline;float:left;");
+			
+			tagimg1.appendChild(npicture);
+			}
+			
+			var tagimg2=document.getElementById("basket3");
+			for(var t=0;t<p3counter;t++)
+			{
+			var npicture=document.createElement("img");
+			npicture.setAttribute("src", "dressUp/" + pic2[t]);
+			npicture.setAttribute("style", "height: " + 110 + "px; width: " + 110+ "px;display:inline;float:left;");
+			tagimg2.appendChild(npicture);
+			
+			}
+			
+		}
+		//document.getElementById("basket1").setAttribute("srcpic[1]);
+		function killitem()
+		{
+			var tagImg = document.getElementById("lei");
+			var tagimg1=document.getElementById("lei1");
+			var tagimg2=document.getElementById("lei2");
+			var tagimg3=document.getElementById("lei3");
+			tagImg.setAttribute("style", "z-index:1;position:absolute; top: 200px; left: 230px; height:150px; weight:150px;");
+			tagImg.setAttribute("src","dressUp/blank.png");
+			tagimg1.setAttribute("style","z-index:1; position:absolute; top: 200px; left: 230px; height:150px; weight:150px;");
+			tagimg1.setAttribute("src","dressUp/blank.png");
+			tagimg2.setAttribute("style", "z-index:1;position:absolute; top: 400px; left: 230px; height:150px; weight:150px;");
+			tagimg2.setAttribute("src","dressUp/blank.png");
+			tagimg3.setAttribute("style", "z-index:1;position:absolute; position:absolute; top: 450px; left: 230px; height:150px; weight:150px;");
+			tagimg3.setAttribute("src","dressUp/blank.png");
+
+		}
+	
+		function budget()
+		{
+			var sum;
+			cp=parseInt(cp);
+			cp1=parseInt(cp1);
+			cp2=parseInt(cp2);
+			sum=cp+cp1+cp2;
+			Venus=document.getElementById("lei_ming");
+			Venus.innerHTML="<a  class='btn btn-info btn-lg'>"+"<span class='glyphicon glyphicon-usd'>"+" "+sum+"</a>";
+
+		}
+		function chang_gender()
+		{
+			var vender;
+			vender=document.getElementById("changen");
+			vender.setAttribute("src","dressUp/man.png");
+			vender.setAttribute("style","position:absolute;top:30px; left: 0px;")
+		}
+		function chang_gender1()
+		{
+			var vender;
+			vender=document.getElementById("changen");
+			vender.setAttribute("src","dressUp/women.png");
+			vender.setAttribute("style","position:absolute;top:30px; left: 10px;")
+		}
+
+		/*$("#ming").aapenChild($("#leilei"));
+		function drag(ev)
+		{
+		ev.dataTransfer.setData("text", ev.target.id);
+		         
+		}
+		function allowdrop(ev)
+		{
+		ev.preventDefault();
+		}
+		function drop(ev)
+		{
+		 ev.preventDefault();
+		    var data = ev.dataTransfer.getData("text");
+		   ev.target.appendChild(document.getElementById(data));
+		         
+		}*/
+			
+
+	</script>
+</head>
+
+<body>
+	
+	<div id="menu-wrapper">
+		<div id="menu" class="container">
+			<ul>
+				<li><a href="index2.html">Homepage</a></li>				
+				<li><a href="product.html">Product</a></li>
+				<li class="current_page_item"><a href="DressUp.html">Dressing Room</a></li>
+				<li><a href="aboutUS.html">About</a></li>
+			</ul>
+		</div>			
+	</div> <!-- end #menu --> 
+	<div id="mainBG"><br>
+		<div id="toolBG">
+
+			<table border="0" id="toolBar">
+				<tr>
+					<td colspan="2">
+						<div class="title">							
+								<b>衣物籃</b>
+						</div><br>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					  <div  class="basket">
+						<div style="width:250;height:11ˇ;overflow: auto; ">
+						<div id="basket1" class="basket456" style="width:2400px; height:113px;"></div>
+						</div>
+						  <div class="basket_title" style="position: absolute; top: 181px; left: 10px;" >
+							  <b>衣服</b>
+						  </div>
+						</div><br>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					  <div class="basket">
+						<div style="width:250;height:110;overflow: auto;">
+						<div id="basket2" class="basket456"  style="width:2400px; height:113px;"></div>
+						</div>
+						  <div class="basket_title" style="position: absolute; top: 359px; left: 10px;">
+							  <b>褲子</b></div>
+						</div><br>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					  <div class="basket">
+						<div style="width:250;height:110;overflow: auto; ">
+						<div id="basket3" class="basket456"  style="width:2400px; height:113px;"></div>
+						</div>
+						  <div class="basket_title"  style="position: absolute; top: 537px; left: 10px;">
+							  <b>鞋子</b>
+						  </div>
+						</div><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="toolButton_Clr" onclick="killitem()">
+							清除
+						</div>
+					</td>
+					<td>
+						<div id="toolButton_Cal" onclick="budget()">
+						 估價
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td><div id="toolButton_Clear" onclick="removeBasket()"> 清空試衣籃 </div></td>
+					<td>
+						<div id="lei_ming" style="position:absolute; top:615px; left:130px;">
+						</div>
+					</td>				
+			  </tr>
+
+			</table>
+		</div>
+		<!-- END OF TOOLBAR -->
+
+		<div id="dressZone">
+			<a  class="btn btn-info btn-lg" id="button1" onclick="leftcon()" value="left-chose" style="position: absolute; top: 250px; left: 72px; z-index: 3;">
+			<span class="glyphicon glyphicon-triangle-left"></span></a>
+			
+			<a  class="btn btn-info btn-lg"  id="button2" onclick="clidiv()" value="right-chose" style="position: absolute; top: 250px; left: 570px; z-index: 3;">
+			<span class="glyphicon glyphicon-triangle-right"></span></a>
+			
+			<a  class="btn btn-info btn-lg" id="button4" onclick="chang_gender()"  style="position: absolute; top: 27px; left: 472px; z-index: 3;">
+			<span class="glyphicon glyphicon-user"></span>帥哥</a> 
+			<a class="btn btn-info btn-lg" id="button3" onclick="chang_gender1()" style="position: absolute; top: 27px; left: 563px; z-index: 3;">
+			<span class="glyphicon glyphicon-user"></span> 正咩</a> 
+			
+			<a  class="btn btn-info btn-lg" id="button6" onclick="leftcon2()" value="left-chose" style="position: absolute; top: 410px; left: 69px; z-index: 3;">
+			<span class="glyphicon glyphicon-triangle-left"></span></a>
+			
+			<a  class="btn btn-info btn-lg"  id="button7" onclick="clidiv2()" value="right-chose" style="position: absolute; top: 410px; left: 570px; z-index: 3;">
+			<span class="glyphicon glyphicon-triangle-right"></span></a>
+			
+			<a  class="btn btn-info btn-lg"  id="button8" onclick="leftcon3()"value="left-chose" style="position: absolute; top: 550px; left: 67px; z-index: 3;">
+			<span class="glyphicon glyphicon-triangle-left"></span></a>
+			<a  class="btn btn-info btn-lg"  id="button9" onclick="clidiv3()" value="right-chose" style="position: absolute; top: 550px; left: 570px; z-index: 3;">
+			<span class="glyphicon glyphicon-triangle-right"></span></a>
+			<img src="dressUp/man.png" id="changen" class="abc" style="z-index:1; position:absolute;top: 30px; left: 0px; z-index:2;">
+			<img src="dressUp/blank.png" id="lei1" class="pic2"  style="z-index:1; position:absolute; top: 50px; left: 300px; height:150px; width:150px;">
+			<img src="dressUp/blank.png" id="lei2" class="pic3"  style="z-index:1; position:absolute; top: 450px; left: 300px; height:150px; width:150px;">
+			<img src="dressUp/blank.png" id="lei3" class="pic3"  style="z-index:1; position:absolute; top: 450px; left: 300px; height:150px; width:150px;">
+			<input type="button" onclick="ranclo()" value="randon clothes" style="position:absolute; top:620px; left:293px; z-index:3;">
+			
+			<img src="dressUp/blank.png" id="lei" class="pic1"  style="z-index:1; position:absolute; top: 200px; left: 315px; height:150px; width:150px;">
+	  </div>
+
+	</div>
+	<div id="footer">
+		<div id="container">
+			<section>
+				<header class="footer">
+					Glisten You Always
+				</header><hr>
+					<p>Thank you for visiting, hoping to serve you !</p>
+			</section>
+		</div>
+	</div>
+
+</body>
+
+</html>
